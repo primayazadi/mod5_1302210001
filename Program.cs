@@ -28,33 +28,34 @@
         }
 
     }
-}
-class SimpleDataBase<T>
-{
-    List<T> storeData { get; set; }
-    List<DateTime> inputDates { get; set; }
 
-    public SimpleDataBase()
+    class SimpleDataBase<T>
     {
-        storeData = new List<T>();
-        inputDates = new List<DateTime>();
+        List<T> storeData { get; set; }
+        List<DateTime> inputDates { get; set; }
 
-    }
-
-    public void addNewData(T data)
-    {
-        storeData.Add(data);
-        inputDates.Add(DateTime.Now);
-    }
-
-    public void printAllData()
-    {
-        for (int i = 0; i < storeData.Count; i++)
+        public SimpleDataBase()
         {
-            Console.WriteLine("Data " + (i + 1) + " berisi: " + storeData.ElementAt(i) + " yang disimpan pada waktu " + inputDates.ElementAt(i));
-        }
-    }
+            storeData = new List<T>();
+            inputDates = new List<DateTime>();
 
+        }
+
+        public void addNewData(T data)
+        {
+            storeData.Add(data);
+            inputDates.Add(DateTime.Now);
+        }
+
+        public void printAllData()
+        {
+            for (int i = 0; i < storeData.Count; i++)
+            {
+                Console.WriteLine("Data " + (i + 1) + " berisi: " + storeData.ElementAt(i) + " yang disimpan pada waktu " + inputDates.ElementAt(i));
+            }
+        }
+
+    }
 }
-}
+
 
